@@ -13,21 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Classes">
+    <Filter Include="inlcude">
+      <UniqueIdentifier>{c5820ae3-d35f-441a-aa6f-0b3dce6b8f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{e296809f-ae99-46d0-82fc-c0c2c4c29e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Classes">
       <UniqueIdentifier>{83a78230-0f84-4aec-ab89-7da7b7321a55}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\Classes\Rotate.cpp">
-      <Filter>Classes</Filter>
+      <Filter>src\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Classes\Polyhedron.cpp">
+      <Filter>src\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Classes\Rotate.h">
-      <Filter>Classes</Filter>
+      <Filter>src\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glext.h">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glut.h">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Classes\Polyhedron.h">
+      <Filter>src\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

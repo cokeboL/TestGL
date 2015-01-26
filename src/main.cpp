@@ -1,6 +1,17 @@
 #include <Windows.h>  
 #include "glut.h"
 #include "Rotate.h"
+#include "Polyhedron.h"
+
+typedef void(*TestFunc)();
+
+int testIdx = 0;
+TestFunc tests[] = 
+{
+	testRotate,
+	testPolyhedron
+};
+
 
 void init()
 {
@@ -13,24 +24,40 @@ void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	testRotate();
+	//testRotate();
+	tests[testIdx]();
 
-	/*
-	glBegin(GL_TRIANGLES);
-	glColor3f(1.0f, 0.0f, 0.0f);
-	glVertex3f(0.0f, 1.0f, 0.0f);
-	glColor3f(0.0f, 1.0f, 0.0f);
-	glVertex3f(-1.0f, -1.0f, 0.0f);
-	glColor3f(0.0f, 0.0f, 1.0f);
-	glVertex3f(1.0f, -1.0f, 0.0f);
-	glEnd();
-	*/
 	glFlush();
 }
+
 void reshape(int w, int h)
 {
 	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
 }
+
+void onKeys(int key, int x, int y)
+{
+	if (key == GLUT_KEY_UP)
+		testIdx++;
+
+	if (key == GLUT_KEY_DOWN)
+		testIdx--;
+
+	if (key == GLUT_KEY_LEFT)
+		testIdx++;
+
+	if (key == GLUT_KEY_RIGHT)
+		testIdx--;
+
+	if (testIdx < 0)
+		testIdx = sizeof(tests)-1;
+
+	if (testIdx > (sizeof(tests)/sizeof(tests[0])-1))
+		testIdx = 0;
+
+	glutPostRedisplay();
+}
+
 int main(int argc, char **argv)
 {
 	glutInit(&argc, argv);
@@ -43,6 +70,9 @@ int main(int argc, char **argv)
 	//glOrtho(0.0f, 1.0f, 0.0f, 1.0f, -1.0f, 1.0f);
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
+	glutSpecialFunc(onKeys);
+
 	glutMainLoop();
+
 	return 0;
 }

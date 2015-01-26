@@ -1,6 +1,6 @@
-#ifndef _ROTATE_H_
-#define _ROTATE_H_
+#ifndef _Rotate_H_
+#define _Rotate_H_
 
 extern void testRotate();
 
-#endif // _ROTATE_H_
+#endif // _Rotate_H_

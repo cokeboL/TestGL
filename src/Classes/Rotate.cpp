@@ -1,22 +1,25 @@
 #include <glut.h>
 #include "Rotate.h"
 
-GLfloat	rotate = 0.02f;;
-GLfloat xMove = 0.005;
-GLfloat yMove = 0.0;
-GLfloat zMove = 0.0;
-bool flag = false;
+static GLfloat	rotate = 0.02f;;
+static GLfloat xMove = 0.005;
+static GLfloat yMove = 0.0;
+static GLfloat zMove = 0.0;
+static bool flag = false;
 
-void drawGLScene(GLvoid)						
+static void drawGLScene(GLvoid)						
 {
+	//glLoadIdentity();
+
 	xMove = -xMove;
 	glTranslatef(xMove, yMove, zMove);
 
-	glRotatef(rotate, 0.5f, 0.5f, 0.0f);
+	glRotatef(rotate, 0.5f, 0.5f, 0.3f);
+	//rotate += 0.02f;
 
 	if (!flag)
 	{
-		glScalef(0.5, 0.3, 0.8);
+		glScalef(0.5, 0.6, 0.8);
 		flag = true;
 	}
 
