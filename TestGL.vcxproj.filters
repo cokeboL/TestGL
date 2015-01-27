@@ -33,6 +33,9 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Classes\Texture.cpp">
+      <Filter>src\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Classes\Rotate.h">
@@ -46,6 +49,18 @@
     </ClInclude>
     <ClInclude Include="src\Classes\Polyhedron.h">
       <Filter>src\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Classes\Texture.h">
+      <Filter>src\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gl.h">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glaux.h">
+      <Filter>inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glu.h">
+      <Filter>inlcude</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

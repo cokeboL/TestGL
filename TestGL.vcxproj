@@ -80,13 +80,18 @@
   <ItemGroup>
     <ClCompile Include="src\Classes\Polyhedron.cpp" />
     <ClCompile Include="src\Classes\Rotate.cpp" />
+    <ClCompile Include="src\Classes\Texture.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\gl.h" />
+    <ClInclude Include="include\glaux.h" />
     <ClInclude Include="include\glext.h" />
+    <ClInclude Include="include\glu.h" />
     <ClInclude Include="include\glut.h" />
     <ClInclude Include="src\Classes\Polyhedron.h" />
     <ClInclude Include="src\Classes\Rotate.h" />
+    <ClInclude Include="src\Classes\Texture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

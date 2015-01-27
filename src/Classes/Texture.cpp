@@ -1,15 +1,16 @@
 #include <glut.h>
-#include "Rotate.h"
+#include <glaux.h>
+#include "Texture.h"
 
-static GLfloat rotate = 0.02f;;
-static GLfloat xMove = 0.005;
-static GLfloat yMove = 0.0;
-static GLfloat zMove = 0.0;
-static bool flag = false;
+GLfloat		xrot;								// X 旋转量
+GLfloat		yrot;								// Y 旋转量
+GLfloat		zrot;								// Z 旋转量
+GLuint		texture[1];							// 存储一个纹理
 
 static void drawGLScene(GLvoid)						
 {
 	//glLoadIdentity();
+	
 
 	xMove = -xMove;
 	glTranslatef(xMove, yMove, zMove);
@@ -42,7 +43,7 @@ static void drawGLScene(GLvoid)
 	glutPostRedisplay();
 }
 
-void testRotate()
+void testTexture()
 {
 	drawGLScene();
 }
